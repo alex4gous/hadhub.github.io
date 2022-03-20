@@ -7,6 +7,5 @@ layout: default
 #### [Retour](../index.md)
 
 ### Failles Webs : 
-#### [LFI - Local File Inclusion](/pages/web/lfi.md)
-#### [RFI - Remote File Inclusion](/pages/web/rfi.md)
-#### [SSRF - Server-Side Request Forgery](/pages/web/rfi.md)
+#### [IDOR - LFI - RFI](pages/web/idor-lfi-rfi.md)
+#### [SSRF - Server-Side Request Forgery](pages/web/ssrf.md)
