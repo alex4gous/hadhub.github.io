@@ -15,7 +15,7 @@ Payload(s):
 ``?x=`` : Ignore le reste de l'URL.
 
 **Exemple :**
-![[second_exemple_ssrf.png]]
+![Branching](/pages/web/web-img/idor-lfi-rfi/second_exemple_ssrf.png)
 
 #### Détecter cette failles :
 - Lorsqu'une URL complète est utilisée dans un paramètre de la barre d'adresse :

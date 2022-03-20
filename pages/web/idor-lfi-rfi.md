@@ -17,9 +17,11 @@
 - Mauvaise validation
 
 Composant d'une URL : 
-![[url.png]]
+![Branching](/pages/web/web-img/idor-lfi-rfi/url.png)
+
 Schéma d'une requête **GET**:
-![[methode_get_php.png]]
+![Branching](/pages/web/web-img/idor-lfi-rfi/methode_get_php.png)
+
 - Les LFI sont trouvées et exploitées dans divers langages de programmation pour les applications Web, tels que PHP, qui sont mal écrits et implémentés. Le principal problème de ces vulnérabilités est la validation des entrées, dans laquelle les entrées de l'utilisateur ne sont ni filtrées ni validées, et l'utilisateur les contrôle.
  
 - Lorsque l'entrée n'est pas validée, l'utilisateur peut transmettre n'importe quelle entrée à la fonction, provoquant la vulnérabilité.
@@ -31,9 +33,10 @@ Schéma d'une requête **GET**:
 
 **Schéma explicatif de la vulnérabilité :** 
 => ````http://webapp.thm/get.php?file=../../../../etc/passwd````
-![[hacker_lfi_schema.png]]
+![Branching](/pages/web/web-img/idor-lfi-rfi/hacker_lfi_schema.png)
+
 ?file=../../../../etc/passwd
-![[changement_dir_LFI.png]]
+![Branching](/pages/web/web-img/idor-lfi-rfi/changement_dir_LFI.png)
 
 #### Chemin intéressant pour l'exploitation d'une LFI
 => **/etc/passwd**
@@ -66,7 +69,6 @@ Schéma d'une requête **GET**:
 /var/log/dmessage
 
 C:\boot.ini
-
 ````
 
 Quand le dev web applique un filtre avec une extension (ex: ``.php``), pour contourner ce problème, nous pouvons utiliser le "NULL BYTE", qui est ``%00``
@@ -96,13 +98,14 @@ Autre tips : https://ruuand.github.io/Local_File_Include/
 - l'argument ``allow_url_fopen`` doit être utilisé.
 
 **Schéma de fonctionnement :**
-![[hacker_rfi_schema.png]]
+![Branching](/pages/web/web-img/idor-lfi-rfi/hacker_rfi_schema.png)
 Le risque de RFI est plus élevé que celui de LFI car les vulnérabilités RFI permettent à un attaquant d'obtenir l'exécution de commandes à distance (RCE) sur le serveur. 
 
 Les autres conséquences d'une attaque RFI réussie incluent : 
 - Divulgation d'informations sensibles 
-- Script intersite (XSS) 
+- Script intersite (XSS)
 - Déni de service (DoS)
+
 # Différentes solutions :
 - Maintener le système et les services, y compris les frameworks d'applications Web, à jour avec la dernière version. 
 
